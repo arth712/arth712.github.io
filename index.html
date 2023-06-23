@@ -42,6 +42,7 @@
       background-color: #45a049;
     }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.4/html5-qrcode.min.js" integrity="sha512-k/KAe4Yff9EUdYI5/IAHlwUswqeipP+Cp5qnrsUjTPCgl51La2/JhyyjNciztD7mWNKLSXci48m7cctATKfLlQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
   <h1>QR Code Check-in</h1>
@@ -55,6 +56,7 @@
   </div>
 
   <script>
+    console.log(Html5QrcodeScanner);
     function checkInTicket() {
       var qrCode = document.getElementById("qrCode").value;
       // Perform check-in logic here, such as validating the QR code or ticket number and updating the database or spreadsheet
