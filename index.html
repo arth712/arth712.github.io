@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QR Code Check-in</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    h1 {
+      margin-top: 50px;
+    }
+    
+    .container {
+      margin-top: 50px;
+    }
+    
+    .input-group {
+      margin-bottom: 20px;
+    }
+    
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .input-group input {
+      width: 300px;
+      padding: 5px;
+    }
+    
+    .btn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>QR Code Check-in</h1>
+  <div class="container">
+    <div class="input-group">
+      <label for="qrCode">Scan QR Code:</label>
+      <input type="text" id="qrCode" placeholder="Scan QR code or enter ticket number">
+    </div>
+    <button class="btn" onclick="checkInTicket()">Check In</button>
+    <p id="checkedInCount"></p>
+  </div>
 
+  <script>
+    function checkInTicket() {
+      var qrCode = document.getElementById("qrCode").value;
+      // Perform check-in logic here, such as validating the QR code or ticket number and updating the database or spreadsheet
+      
+      // Update the checked-in count display
+      var checkedInCount = document.getElementById("checkedInCount");
+      checkedInCount.innerHTML = "Checked-in count: X"; // Replace X with the actual count
+    }
+  </script>
+</body>
+</html>
